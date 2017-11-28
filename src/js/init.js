@@ -6,8 +6,9 @@ import Pdf from './pdf'
 import Html from './html'
 import Image from './image'
 import Json from './json'
+import Card from './card'
 
-let printTypes = ['pdf', 'html', 'image', 'json']
+let printTypes = ['pdf', 'html', 'image', 'json', 'card']
 
 export default {
   init () {
@@ -123,6 +124,9 @@ export default {
         break
       case 'json':
         Json.print(params, printFrame)
+        break
+      case 'card':
+        Card.print(params, printFrame)
         break
       default:
         throw new Error('Invalid print type. Available types are: pdf, html, image and json.')
