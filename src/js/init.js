@@ -92,7 +92,7 @@ export default {
     printFrame = document.createElement('iframe')
 
     // Hide iframe
-    printFrame.setAttribute('style', 'display:none;')
+    printFrame.setAttribute('style', 'display:none; margin:0; padding:0; border:0; @page { margin: 0 };')
 
     // Set element id
     printFrame.setAttribute('id', params.frameId)

@@ -23,6 +23,8 @@ const Print = {
 
           // Inject printable html into iframe body
           printDocument.body.innerHTML = params.htmlData
+          // reset body css
+          printDocument.body.setAttribute('style', 'margin:0; padding:0')
 
           // If printing image, wait for it to load inside the iframe (skip firefox)
           if (params.type === 'image') {

@@ -30,13 +30,13 @@ export default {
 function cardToHTML (params) {
   let data = params.printable
 
-  let htmlData = '<div style="display:flex; flex-direction: row; flex-wrap: wrap; margin: 10px; justify-content: center;  align-items: center;">'
+  let htmlData = '<div style="display:flex; flex-direction: row; flex-wrap: wrap;">'
   // Create html data
   for (let i = 0; i < data.length; i++) {
-    htmlData += '<div style="margin: 10px 0 10px 0; padding: 10px 0 10px 0; width: 340px; height: 150px">'
-    htmlData += '<div style="font-size: 24px;  font-weight: 300;">' + data[i]["title"] + '</div>'
-    htmlData += '<p>' + data[i]["content"] + '</p>'
-    htmlData += '<p style="margin-top: -10px; padding: 0;">' + data[i]["subcontent"] + '</p>'
+    htmlData += '<div style="width: 69.94mm; height: 42.361mm; display: flex; justify-content: center;  align-items: left; flex-direction: column;">'
+    htmlData += '<div style="padding:0 8mm 0 8mm; font-size: 13px;  font-weight: 300;">' + data[i]["title"] + '</div>'
+    htmlData += '<div style="padding:0 8mm 0 8mm; font-size: 11px;  font-weight: 300;">' + data[i]["content"] + '</div>'
+    htmlData += '<div style="padding:0 8mm 0 8mm; font-size: 11px;  font-weight: 300;">' + data[i]["subcontent"] + '</div>'
     htmlData += '</div>'
   }
   htmlData += '</div>'
