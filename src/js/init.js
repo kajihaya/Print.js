@@ -29,7 +29,8 @@ export default {
       modalMessage: 'Retrieving Document...',
       frameId: 'printJS',
       htmlData: '',
-      documentTitle: 'Document'
+      documentTitle: 'Document',
+      cardLayout: [0,0,0,0]
     }
 
     // Check if a printable document or object was supplied
@@ -60,6 +61,7 @@ export default {
         params.showModal = typeof args.showModal !== 'undefined' ? args.showModal : params.showModal
         params.modalMessage = typeof args.modalMessage !== 'undefined' ? args.modalMessage : params.modalMessage
         params.documentTitle = typeof args.documentTitle !== 'undefined' ? args.documentTitle : params.documentTitle
+        params.cardLayout = typeof args.cardLayout !== 'undefined' ? args.cardLayout : params.cardLayout
         break
       default:
         throw new Error('Unexpected argument type! Expected "string" or "object", got ' + typeof args)
