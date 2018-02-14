@@ -53,7 +53,7 @@ function cardToHTML (params) {
         htmlData += '<div style="padding:0 8mm 0 8mm; font-size: 11px; font-weight: 300;">' + data[i]["content"] + '</div>'
         htmlData += '<div style="padding:0 8mm 0 8mm; font-size: 11px; font-weight: 300;">' + data[i]["subcontent"] + '</div>'
         if (specialMessage){
-            htmlData += '<div style="margin: 1mm 8mm; padding:0.5mm; font-size: 10px; border: 1px solid #f00; top: 0px; color: #f00;">' + specialMessage + '</div>'
+            htmlData += '<div style="margin: 1mm 8mm; padding:0.5mm; font-size: 10px; border: 2px solid #000; top: 0px; font-weight:bold;">' + specialMessage + '</div>'
         }
         htmlData += '</div>'
         if ( (i % pageBreak) === (pageBreak - 1) ){
